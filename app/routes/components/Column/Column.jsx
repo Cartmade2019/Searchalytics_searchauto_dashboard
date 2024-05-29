@@ -7,9 +7,13 @@ import {Text} from '@shopify/polaris';
 export const Column = ({ onRemove,activefilters,onEdit,triggerModal }) => {
     return (
         <div className="column-wrap">
-            <Text variant="headingLg" as="h5">
-                Configure Filters
-            </Text>
+            
+            <div className="column_headers">
+                <Text variant="headingLg" as="h5">
+                    Configure Filters
+                </Text>
+                <Input onSubmit={onSubmit}  filters={filters} activefilters={activefilters} />
+            </div>
         
         
     <div className="column">
